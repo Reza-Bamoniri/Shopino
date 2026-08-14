@@ -3,9 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import pinkBanner from "../../assets/images/pink-banner.jpg";
-import yellowBanner from "../../assets/images/yellow-banner2.jpg";
-import onlineShoppingBanner from "../../assets/images/online-shopping-yellow-banner.jpg";
+import pinkBanner from "../../assets/images/pink-banner.png";
+import yellowBanner from "../../assets/images/yellow-banner2.png";
+import onlineShoppingBanner from "../../assets/images/shopping-yellow-banner.png";
+import newbanner from "../../assets/images/new.png";
 
 
 const HeroSection = () => {
@@ -20,17 +21,22 @@ const HeroSection = () => {
           >
             <SwiperSlide>
               <div className="h-100 w-full">
-                <img src={pinkBanner} className="size-full! object-cover!" />
+                <img src={pinkBanner} className="size-full!" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="h-100 w-full">
-                <img src={yellowBanner} className="size-full! object-cover!" />
+                <img src={yellowBanner} className="size-full!" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="h-100 w-full">
-                <img src={onlineShoppingBanner} className="size-full! object-cover!" />
+                <img src={onlineShoppingBanner} className="size-full!" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="h-100 w-full">
+                <img src={newbanner} className="size-full!" />
               </div>
             </SwiperSlide>
     

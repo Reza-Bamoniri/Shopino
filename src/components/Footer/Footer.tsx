@@ -221,21 +221,21 @@ const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-slate-800 p-2">
               <img
-                src="/placeholder.svg?key=w4p8g"
+                src="/Electronic Trust Symbol.jpg"
                 alt="Electronic Trust Symbol"
                 className="h-full w-full object-contain"
               />
             </div>
             <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-slate-800 p-2">
               <img
-                src="/placeholder.svg?key=t6y8c"
+                src="/Samandehi Symbol.png"
                 alt="Samandehi Symbol"
                 className="h-full w-full object-contain"
               />
             </div>
             <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-slate-800 p-2">
               <img
-                src="/placeholder.svg?key=tqz9f"
+                src="Customer Satisfaction Symbol.jpg"
                 alt="Customer Satisfaction Symbol"
                 className="h-full w-full object-contain"
               />
