@@ -19,7 +19,7 @@ const Header = () => {
               <div className="w-px h-4 bg-black/10" />
               <Link to="/about-us">
                 <TbInfoCircle />
-                <span>َAbout US</span>
+                <span>About US</span>
               </Link>
               <div className="w-px h-4 bg-black/10" />
               <Link to="/contact-us">
