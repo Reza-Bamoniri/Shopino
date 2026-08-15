@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import AboutUS from "../pages/AboutUS";
 import ContactUS from "../pages/ContactUS";
+import Cart from "../pages/Cart";
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
         {index: true, element: <Home/>},
         { path: "about-us", element: <AboutUS/> },
         { path: "contact-us", element: <ContactUS/> },
+        { path: "cart", element: <Cart/> },
     ]
 }
 ]);
