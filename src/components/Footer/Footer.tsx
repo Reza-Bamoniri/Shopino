@@ -235,7 +235,7 @@ const Footer = () => {
             </div>
             <div className="flex h-20 w-20 items-center justify-center rounded-lg bg-slate-800 p-2">
               <img
-                src="Customer Satisfaction Symbol.jpg"
+                src="/Customer Satisfaction Symbol.jpg"
                 alt="Customer Satisfaction Symbol"
                 className="h-full w-full object-contain"
               />
