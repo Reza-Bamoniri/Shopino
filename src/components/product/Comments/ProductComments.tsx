@@ -1,3 +1,4 @@
+import Comment from "../../common/comment/Comment"
 import AiOverview from "./AiOverview"
 import CreateComment from "./CreateComment"
 
@@ -17,11 +18,11 @@ const ProductComments = () => {
 
         <div className="col-span-5 ">
           {/* All Comments */}
-          {/* <div id="comments-content" className="pt-0! space-y-5">
-            {Array.from({ length: 3 }).map((comment) => (
-              <Comment {...comment} />
+          <div id="comments-content" className="pt-0! space-y-5">
+            {Array.from({ length: 3 }).map(() => (
+              <Comment  />
             ))}
-          </div> */}
+          </div>
 
           <div className="mt-5 flex items-center justify-end">
             <button className="px-3 py-1.5 bg-slate-800 text-xs flex-center gap-1 rounded-md text-white">
