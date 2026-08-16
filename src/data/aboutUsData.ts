@@ -1,51 +1,51 @@
 const aboutUsData = [
   {
     id: 1,
-    label: "درباره فروشگاه سبز شاپ",
+    label: "Who We Are",
     content:
-      "سبز شاپ یک فروشگاه آنلاین تخصصی در زمینه محصولات ارگانیک، طبیعی و دوستدار محیط زیست است. ما از سال ۱۳۹۸ فعالیت خود را آغاز کرده‌ایم و با تمرکز بر کیفیت بالا و قیمت‌های رقابتی، بیش از ۱۰,۰۰۰ مشتری راضی را جذب کرده‌ایم. محصولات ما شامل میوه‌ها و سبزیجات تازه، مواد غذایی ارگانیک، لوازم آرایشی طبیعی و محصولات مراقبت از پوست و مو می‌شود.",
+      "Shapino is an online shopping platform that provides a wide range of digital products and accessories from trusted brands.",
   },
   {
     id: 2,
-    label: "آدرس و مکان‌یابی",
+    label: "Our Mission",
     content:
-      "آدرس اصلی: تهران، خیابان ولیعصر، روبروی پارک ساعی، پلاک ۱۲۳۴، طبقه همکف. برای دسترسی آسان، از اپلیکیشن‌های نقشه مانند گوگل مپس یا ویز استفاده کنید. پارکینگ اختصاصی برای مشتریان در دسترس است. شعبه دوم: کرج، بلوار طالقانی، مجتمع تجاری نور، واحد ۵۰۶.",
+      "Our mission is to make online shopping simple, reliable, and accessible by offering quality products and a smooth shopping experience.",
   },
   {
     id: 3,
-    label: "ساعات کاری و تعطیلات",
+    label: "What We Offer",
     content:
-      "شنبه تا چهارشنبه: ۸:۳۰ صبح تا ۱۰ شب. پنجشنبه: ۸:۳۰ صبح تا ۱۲ شب. جمعه: ۹ صبح تا ۸ شب. در ایام تعطیلات رسمی مانند نوروز و عید فطر، ساعات کاری ممکن است تغییر کند؛ لطفاً از طریق وبسایت یا تماس تلفنی بررسی کنید.",
+      "At Shapino, you can find a variety of products including laptops, smartphones, monitors, headphones, and other digital accessories.",
   },
   {
     id: 4,
-    label: "شماره تماس و پشتیبانی",
+    label: "Quality & Authenticity",
     content:
-      "شماره اصلی: ۰۲۱-۸۸۷۷۶۵۴۳ (خطوط مستقیم). پشتیبانی آنلاین: از طریق چت وبسایت یا واتس‌اپ به شماره ۰۹۱۲-۳۴۵۶۷۸۹. ایمیل: info@greenshop.ir. تیم پشتیبانی ما ۲۴ ساعته در دسترس است و به سوالات شما در مورد سفارشات، بازگردانی و مشاوره محصولات پاسخ می‌دهد.",
+      "We are committed to offering authentic and high-quality products from reliable brands and trusted suppliers.",
   },
   {
     id: 5,
-    label: "سیاست‌های ارسال و تحویل",
+    label: "Customer Experience",
     content:
-      "ارسال رایگان برای سفارش‌های بالای ۵۰۰,۰۰۰ تومان در تهران. تحویل درب منزل ظرف ۱-۲ روز کاری. برای شهرهای دیگر، از طریق پست پیشتاز (۳-۵ روز) یا تیپاکس (۲-۴ روز). هزینه ارسال بر اساس وزن و مسافت محاسبه می‌شود. ردیابی سفارش از پنل کاربری امکان‌پذیر است.",
+      "We focus on providing a convenient and enjoyable shopping experience, from product discovery to order delivery and after-sales support.",
   },
   {
     id: 6,
-    label: "گارانتی و بازگشت کالا",
+    label: "Our Customers",
     content:
-      "تمام محصولات دارای گارانتی ۷ روزه بازگشت بدون قید و شرط هستند، مشروط به عدم استفاده و حفظ بسته‌بندی اصلی. برای محصولات تازه، مهلت بازگشت ۴۸ ساعته است. فرآیند بازگشت: تماس با پشتیبانی، ارسال کالا به آدرس فروشگاه و واریز وجه ظرف ۳ روز کاری.",
+      "Our customers are at the heart of everything we do. We continuously work to understand their needs and provide products and services that meet their expectations.",
   },
   {
     id: 7,
-    label: "تخفیف‌ها و پیشنهادهای ویژه",
+    label: "Our Commitment",
     content:
-      "تخفیف ۲۰% برای مشتریان جدید در اولین خرید. عضویت در باشگاه مشتریان برای امتیازهای قابل تبدیل به تخفیف. پیشنهادهای هفتگی: مثلاً این هفته، سبزیجات ارگانیک با ۱۵% تخفیف. جشنواره‌های فصلی مانند نوروز با تا ۵۰% تخفیف روی محصولات منتخب.",
+      "We are committed to transparency, customer satisfaction, fast service, and continuous improvement in every part of our business.",
   },
   {
     id: 8,
-    label: "وبسایت و اپلیکیشن",
+    label: "Why Shapino?",
     content:
-      "وبسایت: www.greenshop.ir – قابل دسترسی از تمام مرورگرها با رابط کاربری فارسی و انگلیسی. اپلیکیشن موبایل: دانلود از گوگل پلی و اپ استور (نسخه اندروید ۵.۰+ و iOS ۱۲+). ویژگی‌های اپ: سفارش سریع، نوتیفیکیشن پیشنهادها و پرداخت آنلاین امن.",
+      "With a diverse product selection, competitive prices, reliable service, and a customer-focused approach, Shapino aims to become a trusted destination for online shopping.",
   },
 ];
 
