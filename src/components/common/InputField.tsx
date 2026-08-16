@@ -4,9 +4,13 @@ type InputFieldProps = {
      type?: string
      placeholder: string
      onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
+     name: string
+     value: string
+     maxLength?: number
+     inputMode?: "search" | "text" | "numeric" | "email" | "tel" | "url" | "none" | "decimal"
     }
 
-const InputField = ({ label, fullWidth, type, placeholder, onChange  }: InputFieldProps) => {
+const InputField = ({ label, fullWidth, type, placeholder, onChange, name, value, maxLength, inputMode  }: InputFieldProps) => {
 
     const cardClassName = "*:block w-full space-y-2.5 ".concat(
     fullWidth ? "col-span-2" : "",
@@ -24,10 +28,14 @@ const InputField = ({ label, fullWidth, type, placeholder, onChange  }: InputFie
       <input
         type={type}
         placeholder={
-          placeholder ? placeholder : "لطفا این فیلد را تکمیل بفرمایید."
+          placeholder ? placeholder : "Please complete this field."
         }
         id={uniqueID}
         onChange={onChange}
+        value={value}
+        name={name}
+        maxLength={maxLength}
+        inputMode={inputMode}
         className="contact-input-field"
       />
     </div>
