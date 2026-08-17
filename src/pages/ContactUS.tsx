@@ -1,51 +1,20 @@
-import { useState } from "react"
+
 import { Link } from "react-router"
-import axios from "axios"
-import { toast } from "sonner"
+
+
 
 import SectionTitle from "../components/common/SectionTitle"
 import InputField from "../components/common/InputField"
 import contactUs from "../assets/images/contactus.jpg"
+import UsContactUs from "../hooks/usContactUs"
 
 
 
 
 const ContactUS = () => {
 
-  const [form, setForm] = useState({"name": "","phone": "","subject": "","content": ""});
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
-  }
-
-  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-       e.preventDefault()
-       setIsSubmitting(true)
-       try {
-        console.log(form);
-        const response = await axios.post("https://shopino.iran.liara.run/v1/contact-us",form)
-        
-        if(response.data.status === 201){
-          toast.success('Message sent successfully.') 
-        }
-
-       } catch (error) {
-        if (axios.isAxiosError(error)) {
-
-       if(error.response?.status === 400){
-          toast.error("Failed to send the message.")
-        }
-      console.log("Status:", error.response?.status);
-      console.log("Response:", error.response?.data);
-    }else {
-    toast.error("An unexpected error occurred.");
-   }    
-    }
-    setIsSubmitting(false)
-     setForm({"name": "","phone": "","subject": "","content": "" })
-  }
+  const {isSubmitting, form, handleChangeInput, handleSubmit} = UsContactUs(
+    {"name": "","phone": "","subject": "","content": ""})
 
 
   return (
