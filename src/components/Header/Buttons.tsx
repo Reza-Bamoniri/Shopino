@@ -11,7 +11,7 @@ const Buttons = () => {
           >
             <HiShoppingCart className="text-xl text-slate-700!" />
           </Link>
-          <Link to="/auth/login" className="bg-[#2A2D53]">
+          <Link to="/auth" className="bg-[#2A2D53]">
             Sign up  |  Sign in
           </Link>
           <Link to="/contact-us" className="bg-[#FF5F55]">
