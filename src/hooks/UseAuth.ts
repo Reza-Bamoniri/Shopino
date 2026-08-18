@@ -4,13 +4,17 @@ import { sendOtpSchema, verifyOtpSchema } from "../validators/auth";
 import { sentOtp, verifyOtp } from "../services/auth.service";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
+import UseTimer from "./UseTimer";
+
 
 
 const UseAuth = () => {
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [hasSentOtp, setHasSentOtp] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { isExpired, restart, timerUi } = UseTimer(120)
+
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)
     
@@ -23,7 +27,18 @@ const UseAuth = () => {
    console.log(res);
    
     setHasSentOtp(true)
+    restart()
  }
+ const handleResendPhone = async () => {
+   const res = await sentOtp(phone)
+   console.log(res);
+   toast.warning("The new code has been sent.")
+   restart()
+   setOtp("")
+ }
+
+
+
  const handleSendOtp = async () => {
     if(!validate(verifyOtpSchema, {phone, otp})) return;
 
@@ -62,7 +77,7 @@ const UseAuth = () => {
 
   
 
- return {phone, otp, hasSentOtp, handlePhoneChange, handleOtpChange, handleSubmit}
+ return {phone, otp, hasSentOtp, handlePhoneChange, handleOtpChange, handleSubmit, handleResendPhone, timerUi, isExpired}
 }
 
 export default UseAuth;

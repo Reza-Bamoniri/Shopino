@@ -4,7 +4,7 @@ import UseAuth from "../hooks/UseAuth"
 
 const Auth = () => {
 
-  const {phone, otp, hasSentOtp, handlePhoneChange, handleOtpChange, handleSubmit} = UseAuth()
+  const {phone, otp, hasSentOtp, handlePhoneChange, handleOtpChange, handleSubmit, timerUi, handleResendPhone, isExpired} = UseAuth()
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
@@ -19,7 +19,7 @@ const Auth = () => {
           <main className="space-y-3">
 
             {
-              hasSentOtp ? <div className="flex items-center justify-center gap-1">
+              hasSentOtp ? (<><div className="flex items-center justify-center gap-1">
               <input
                 className="auth-input text-center"
                 type="text"
@@ -28,7 +28,15 @@ const Auth = () => {
                 value={otp}
                 onChange={handleOtpChange}
               />
-            </div> :
+            </div>
+
+                 <div className="text-center mt-3">
+                  {
+                     isExpired ? <button className="text-red-600 text-sm hover:underline" onClick={handleResendPhone}>Resend Code</button> : <span className="text-neutral-500">{timerUi()}</span>
+                  }
+                 </div>
+
+            </>) :
              (<>
              <p className="text-xs font-normal text-neutral-600">
              please enter your phone number
@@ -41,7 +49,7 @@ const Auth = () => {
             
           </main>
           <footer className="space-y-3 flex items-center justify-center flex-col">
-            <button className="h-10 text-sm flex items-center w-full duration-150 hover:bg-[#2A2D53]/80 cursor-pointer justify-center bg-[#2A2D53] text-white rounded-lg focus-within:ring-4 ring-blue-500/40 active:scale-100! hover:scale-103 hover:shadow-lg shadow-blue-500/30">
+            <button disabled={hasSentOtp && isExpired} className={`${hasSentOtp && isExpired && "opacity-45 cursor-not-allowed"} h-10 text-sm flex items-center w-full duration-150 hover:bg-[#2A2D53]/80 justify-center bg-[#2A2D53] text-white rounded-lg focus-within:ring-4 ring-blue-500/40 active:scale-100! hover:scale-103 hover:shadow-lg shadow-blue-500/30`}>
              {hasSentOtp ? "Verify Code" :"Send Code"}
             </button>
             <div className="space-y-1 text-center mt-4">
