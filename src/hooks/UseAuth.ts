@@ -5,7 +5,7 @@ import { sentOtp, verifyOtp } from "../services/auth.service";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
 import UseTimer from "./UseTimer";
-import AuthContext from "../context/AuthContext";
+import AuthContext from "../context/authContext/AuthContext";
 
 
 

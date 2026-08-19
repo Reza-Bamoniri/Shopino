@@ -7,6 +7,7 @@ import SectionTitle from "../components/common/SectionTitle"
 import InputField from "../components/common/InputField"
 import contactUs from "../assets/images/contactus.jpg"
 import UsContactUs from "../hooks/usContactUs"
+import Maps from "../components/common/tooltips/Maps"
 
 
 
@@ -103,7 +104,7 @@ const ContactUS = () => {
               description="You can visit one of Shapino’s official offices in person and get in touch with our team."
             />
     
-            {/* <Maps /> */}
+            <Maps />
           </div>
         </main>
   )

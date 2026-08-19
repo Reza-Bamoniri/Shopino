@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { HiShoppingCart } from "react-icons/hi";
 import { Link } from "react-router";
 
-import AuthContext, { type AuthContextType } from "../../context/AuthContext";
+import AuthContext, { type AuthContextType } from "../../context/authContext/AuthContext";
 
 
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import AuthContext from "../AuthContext";
+import AuthContext from "./AuthContext";
 import { getMe } from "../../services/auth.service";
 
 type AuthProviderProp = {children: React.ReactNode}
