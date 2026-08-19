@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect } from "react-router";
 
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
@@ -8,6 +8,10 @@ import Cart from "../pages/Cart";
 import Product from "../pages/Product";
 import AuthLayout from "../layouts/AuthLayout";
 import Auth from "../pages/Auth";
+import CmsLayout from "../layouts/CmsLayout";
+import Products from "../pages/Dashboard/manager/Products";
+import Orders from "../pages/Dashboard/manager/Orders";
+import HomePage from "../pages/Dashboard/manager/Home";
 
 
 const router = createBrowserRouter([
@@ -27,6 +31,23 @@ const router = createBrowserRouter([
             ]
         }
     ]
+},
+
+{
+    path: "dashboard", 
+    element: <CmsLayout/>,
+    children: [
+        {
+            path: "manager",
+            children: [
+                {index: true, loader: () => redirect("home") },
+                { path: "home", element: <HomePage/> },
+                { path: "products", element: <Products/> },
+                { path: "orders", element: <Orders/> },
+            ]
+        }
+    ]
+
 }
 ]);
 
