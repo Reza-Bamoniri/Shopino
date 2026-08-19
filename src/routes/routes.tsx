@@ -12,6 +12,8 @@ import CmsLayout from "../layouts/CmsLayout";
 import Products from "../pages/Dashboard/manager/Products";
 import Orders from "../pages/Dashboard/manager/Orders";
 import HomePage from "../pages/Dashboard/manager/Home";
+import { getMe } from "../services/auth.service";
+import Forbidden from "../pages/Forbidden";
 
 
 const router = createBrowserRouter([
@@ -29,7 +31,8 @@ const router = createBrowserRouter([
             children: [
                 {index: true, element: <Auth/>}
             ]
-        }
+        },
+        { path: "forbidden", element: <Forbidden /> },
     ]
 },
 
@@ -39,6 +42,28 @@ const router = createBrowserRouter([
     children: [
         {
             path: "manager",
+            loader: async () => {
+               try {
+
+                const {data} = await getMe()
+                console.log(data);
+                
+                
+                if(data.user.phone !== "09135783451"){
+                   return redirect("/forbidden")
+                   
+                   
+                }
+
+               return data.user
+                
+                
+               } catch (error) {
+                console.log(error);
+                
+                return redirect("/auth")
+               }
+            },
             children: [
                 {index: true, loader: () => redirect("home") },
                 { path: "home", element: <HomePage/> },

@@ -11,7 +11,7 @@ const Buttons = () => {
 
   const {user, isLoading}: AuthContextType = useContext(AuthContext)!
   
-  console.log(user);
+  
   
 
   return (

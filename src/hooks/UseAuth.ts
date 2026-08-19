@@ -54,7 +54,7 @@ const UseAuth = () => {
     if(!response) return
 
     toast.success("You have logged in successfully")
-    navigate("/")
+    navigate("/dashboard/manager")
     result?.refreshUser()
     
  }
