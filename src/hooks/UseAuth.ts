@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { validate } from "../validators";
 import { sendOtpSchema, verifyOtpSchema } from "../validators/auth";
 import { sentOtp, verifyOtp } from "../services/auth.service";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
 import UseTimer from "./UseTimer";
+import AuthContext from "../context/AuthContext";
 
 
 
@@ -14,6 +15,7 @@ const UseAuth = () => {
   const [hasSentOtp, setHasSentOtp] = useState(false);
   const navigate = useNavigate();
   const { isExpired, restart, timerUi } = UseTimer(120)
+  const result = useContext(AuthContext)
 
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)
@@ -53,6 +55,7 @@ const UseAuth = () => {
 
     toast.success("You have logged in successfully")
     navigate("/")
+    result?.refreshUser()
     
  }
 

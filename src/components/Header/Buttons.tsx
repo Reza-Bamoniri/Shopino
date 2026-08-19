@@ -25,7 +25,7 @@ const Buttons = () => {
 
 
           {
-            isLoading ? <span>loading...</span> : user ? <Link to="/" className="bg-[#2A2D53]">Dashboard</Link> :
+            isLoading ? <span className="bg-[#2A2D53]">loading...</span> : user ? <Link to="/" className="bg-[#2A2D53]">Dashboard</Link> :
           <Link to="/auth" className="bg-[#2A2D53]">
             Sign up  |  Sign in
           </Link>

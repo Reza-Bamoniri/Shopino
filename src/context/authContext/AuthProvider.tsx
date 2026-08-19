@@ -11,9 +11,7 @@ export const AuthProvider = ({children}: AuthProviderProp) => {
     const [user, setUser] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
 
-    useEffect(() => {
-      
-        const initAuth = async () => {
+    const initAuth = async () => {
            setIsLoading(true)
             try {
 
@@ -28,14 +26,20 @@ export const AuthProvider = ({children}: AuthProviderProp) => {
                 console.log(error);
                 
             }finally{setIsLoading(false)}
-        }
+        };
 
+
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         initAuth()
     },[])
     
 
+    const refreshUser = async () => initAuth()
 
-    return <AuthContext.Provider value={{user, isLoading}}>{children}</AuthContext.Provider>
+
+    return <AuthContext.Provider value={{user, isLoading, refreshUser}}>{children}</AuthContext.Provider>
 }
 
 

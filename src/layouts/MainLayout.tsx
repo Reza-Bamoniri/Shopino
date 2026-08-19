@@ -3,7 +3,7 @@ import { Toaster } from 'sonner'
 
 import Footer from "../components/Footer/Footer"
 import Header from "../components/Header/Header"
-import AuthProvider from "../context/authContext/AuthContext"
+import AuthProvider from "../context/authContext/AuthProvider"
 
 
 const MainLayout = () => {
