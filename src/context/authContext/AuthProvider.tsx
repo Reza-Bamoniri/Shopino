@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AuthContext from "./AuthContext";
-import { getMe } from "../../services/auth.service";
+import { getMe, logout } from "../../services/auth.service";
 
 type AuthProviderProp = {children: React.ReactNode}
 
@@ -39,7 +39,19 @@ export const AuthProvider = ({children}: AuthProviderProp) => {
     const refreshUser = async () => initAuth()
 
 
-    return <AuthContext.Provider value={{user, isLoading, refreshUser}}>{children}</AuthContext.Provider>
+    const handleLogout = async () => {
+        setIsLoading(true)
+        try {
+            await logout()
+        } catch (error) {
+            console.log(error);
+            
+        } finally {setUser(null)
+            setIsLoading(false)}
+    } 
+
+
+    return <AuthContext.Provider value={{user, isLoading, refreshUser, handleLogout}}>{children}</AuthContext.Provider>
 }
 
 
