@@ -53,8 +53,8 @@ const UseAuth = () => {
     const response = await handleSendOtp()
     if(!response) return
 
-    toast.success("You have logged in successfully")
     navigate("/dashboard/manager")
+    toast.success("You have logged in successfully")
     result?.refreshUser()
     
  }
