@@ -14,6 +14,7 @@ import Orders from "../pages/Dashboard/manager/Orders";
 import HomePage from "../pages/Dashboard/manager/Home";
 import { getMe } from "../services/auth.service";
 import Forbidden from "../pages/Forbidden";
+import NotFound from "../pages/NotFound";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
         { path: "forbidden", element: <Forbidden /> },
     ]
 },
+{path: "*", element: <NotFound/>},
 
 {
     path: "dashboard", 
