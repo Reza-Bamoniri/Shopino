@@ -9,7 +9,7 @@ import Product from "../pages/Product";
 import AuthLayout from "../layouts/AuthLayout";
 import Auth from "../pages/Auth";
 import CmsLayout from "../layouts/CmsLayout";
-import Products from "../pages/Dashboard/manager/Products";
+import ManagerProducts from "../pages/Dashboard/manager/Products";
 import Orders from "../pages/Dashboard/manager/Orders";
 import HomePage from "../pages/Dashboard/manager/Home";
 import { getMe } from "../services/auth.service";
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
             children: [
                 {index: true, loader: () => redirect("home") },
                 { path: "home", element: <HomePage/> },
-                { path: "products", element: <Products/> },
+                { path: "products", element: <ManagerProducts/> },
                 { path: "orders", element: <Orders/> },
             ]
         }
